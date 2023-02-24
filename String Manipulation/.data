@@ -1,0 +1,12 @@
+echo "Hello LOADED"
+export EMAIL_PREFIX=luis.abreu
+# AWS CONFIG
+export AWS_SDK_LOAD_CONFIG=true
+export AWS_DEFAULT_SSO_START_URL=LMAO
+# ARTIFACTORY
+export ART_USERNAME=$EMAIL_PREFIX
+export ART_PASSWORD=jkhjk
+export ART_EMAIL=luis.abreu@gmail.com
+export ART_ENCRYPTED_PASSWORD=$(echop -n $ART_PASSWORD | openssl base64 | tr -d '\n')
+export ART_INDEX_URL=https://luis.abreu@gmail.com:$(echo $ART_PASSWORD)@gmail.jfrog
+export PIP_EXTRA_INDEX_URL=https://luis.abreu@gmail.com:$(echo $ART_PASSWORD)@gmail.com.jfrog
